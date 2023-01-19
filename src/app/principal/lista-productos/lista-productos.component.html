@@ -1,0 +1,24 @@
+<section>
+    <table class="table-styles">
+        <tr>
+            <th>Id</th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Precio de compra</th>
+            <th>Precio de venta</th>
+            <th>Ganancia</th>
+            <th>Existencia</th>
+            <th>Editar</th>
+        </tr>
+        <tr *ngFor="let item of productos; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.codigo}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.precioCompra}}.00</td>
+            <td>{{item.precioVenta}}.00</td>
+            <td>{{item.ganancia}}.00</td>
+            <td>{{item.existencia}}</td>
+            <td><button class="" (click)="visualizarProducto(i+1)">Editar</button></td>
+        </tr>
+    </table>
+</section>
